@@ -6,7 +6,7 @@ __author__ = 'kongaloosh'
 
 
 class AlbumExtension(Extension):
-    def extend_markdown(self, md, md_globals):
+    def extendMarkdown(self, md, md_globals):
         """ Add FencedBlockPreprocessor to the Markdown instance. """
         md.registerExtension(self)
 
