@@ -1,6 +1,6 @@
 # Markdown Album Extension
 
-###What the heckbiscuit is this?
+### What the heckbiscuit is this?
 
 This is an extension I made for automatically generating albums in . The HTML generated for the albums uses [fancybox](http://fancybox.net/) and [bootstrap](https://getbootstrap.com/). While not required, they will make your project look really pretty.
 
@@ -19,4 +19,3 @@ To use:
 from  import AlbumExtension
 markdown.markdown(example_text, extensions=[AlbumExtension()])
 ```
-
