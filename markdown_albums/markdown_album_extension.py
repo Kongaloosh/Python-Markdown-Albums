@@ -19,7 +19,7 @@ IMG_WRAP = \
 
 album_regexp = r'''(@{3,})(?P<album>((.)|(\n))*?)(@{3,})'''
 images_regexp = '(?<=\){1})[ ,\n,\r]*-*[ ,\n,\r]*(?=\[{1})'
-image_ref_regexp = '(?<=\({1})(.)*(?=\){1}'
+image_ref_regexp = '(?<=\({1})(.)*(?=\){1})'
 alt_text_regexp = "(?<=\[{1})(.)*(?=\]{1})"
 
 
