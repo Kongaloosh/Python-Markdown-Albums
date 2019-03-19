@@ -5,15 +5,15 @@ import re
 __author__ = 'kongaloosh'
 
 GROUP_WRAP = '''
-<div class="album-component row text-center">
+<div class="album-component d-flex flex-row justify-content-center">
     %s
 </div>
 '''
 
 IMG_WRAP = \
     '''
-    <a class="fancybox" rel="group"  href="%s">
-        <img src="%s" class="u-photo img-responsive img-thumbnail" style="max-height:60%%;max-width:%d%%">
+    <a class="fancybox p-2 text-center" rel="group"  href="%s">
+        <img src="%s" class="u-photo img-responsive img-thumbnail" style="max-height:auto">
     </a>
     '''
 
@@ -60,7 +60,7 @@ class AlbumPreprocessor(Preprocessor):
                         # todo: images needs to be factored out based on whatever the server is using as the destination
                         "/images" + image_location,     # the location where the images are stored in full-resolution
                         image_location,                 # the location where the image is stored for being served
-                        100 / (len(images) + .2))       # the width of the image
+                        )
                 # finally put html album into div
                 generated_html = self.GROUP_WRAP % generated_html  # todo: should add the alt text in
                 placeholder = self.markdown.htmlStash.store(generated_html, safe=True)
